@@ -59,6 +59,44 @@ The purpose column is categorical. So, I transformed them using dummy variables 
   <li> Create a list of 1 element containing the string 'purpose'. Call this list cat_feats.</li>
 <li> Now use pd.get_dummies(loans,columns=cat_feats,drop_first=True) to create a fixed larger dataframe that has new feature columns with dummy variables. Set this dataframe as final_data.</li>
   </ul>
+## Train Test Split
+Used sklearn to split your data into a training set and a testing set.
+
+## Training a Decision Tree Model
+Started by training a single decision tree first then created an instance of DecisionTreeClassifier() called dtree and fit it to the training data.
+
+## Predictions and Evaluation of Decision Tree
+Created predictions from the test set and create a classification report and a confusion matrix.
+
+![R1](https://user-images.githubusercontent.com/55116845/122118834-f398b700-ce41-11eb-8cf3-3dd89d13a8d5.PNG)
+
+![R2](https://user-images.githubusercontent.com/55116845/122119172-512d0380-ce42-11eb-842d-098a6df884b6.PNG)
+
+## Training the Random Forest model
+
+Created an instance of the RandomForestClassifier class and fit it to our training data from the previous step.
+
+Predictions and Evaluation
+Let's predict off the y_test values and evaluate our model.
+
+Predict the class of not.fully.paid for the X_test data.
+
+Classification report from the results.
+
+![R3](https://user-images.githubusercontent.com/55116845/122130590-4cbc1700-ce51-11eb-90a5-98ddabdda72a.PNG)
+
+Confusion Matrix for the predictions
+
+![R4](https://user-images.githubusercontent.com/55116845/122130672-7117f380-ce51-11eb-95e3-39096be6af1f.PNG)
+
+
+
+
+
+
+
+
+
 
 
 
