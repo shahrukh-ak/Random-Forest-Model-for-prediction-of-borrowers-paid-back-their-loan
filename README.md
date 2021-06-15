@@ -89,6 +89,15 @@ Confusion Matrix for the predictions
 
 ![R4](https://user-images.githubusercontent.com/55116845/122130672-7117f380-ce51-11eb-95e3-39096be6af1f.PNG)
 
+## Results:
+
+### What performed better the random forest or the decision tree?
+<ul>
+  <li>Depends what metric you are trying to optimize for.</li>
+  <li>Notice the recall for each class for the models.</li>
+  <li>Neither did very well, more feature engineering is needed.</li>
+</ul>
+
 
 
 
