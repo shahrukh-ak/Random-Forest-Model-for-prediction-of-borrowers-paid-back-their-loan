@@ -26,3 +26,39 @@ Here are what the columns represent:
   <li>delinq.2yrs: The number of times the borrower had been 30+ days past due on a payment in the past 2 years.</li>
   <li>pub.rec: The borrower's number of derogatory public records (bankruptcy filings, tax liens, or judgments).</li>
 </ul>
+
+## Exploratory Data Analysis:
+I used seaborn and pandas built-in plotting capabilitie to create a histogram of two FICO distributions on top of each other, one for each credit.policy outcome.
+
+![1](https://user-images.githubusercontent.com/55116845/122116601-3b6a0f00-ce3f-11eb-88c4-364e3ad50af6.png)
+
+Create a similar figure, except this time select by the not.fully.paid column.
+
+![2](https://user-images.githubusercontent.com/55116845/122116753-69e7ea00-ce3f-11eb-8c08-2287ef30ae06.png)
+
+Create a countplot using seaborn showing the counts of loans by purpose, with the color hue defined by not.fully.paid.
+
+![3](https://user-images.githubusercontent.com/55116845/122116825-8552f500-ce3f-11eb-83a8-fa1ee6f77807.png)
+
+Let's see the trend between FICO score and interest rate. Recreate the following jointplot.
+
+![4](https://user-images.githubusercontent.com/55116845/122116943-a74c7780-ce3f-11eb-819c-be8b726bd74f.png)
+
+Create the following lmplots to see if the trend differed between not.fully.paid and credit.policy. Check the documentation for lmplot() if you can't figure out how to separate it into columns.
+
+![5](https://user-images.githubusercontent.com/55116845/122117003-c0552880-ce3f-11eb-83c9-5774a1e8ba63.png)
+
+## Setting up the Data:
+Then I set up data for Random Forest Classification Model. 
+
+## Categorical Features:
+The purpose column is categorical. So, I transformed them using dummy variables so sklearn will be able to understand them. I did this in one clean step using pd.get_dummies.
+
+### Way of dealing with these columns:
+<ul>
+  <li> Create a list of 1 element containing the string 'purpose'. Call this list cat_feats.</li>
+<li> Now use pd.get_dummies(loans,columns=cat_feats,drop_first=True) to create a fixed larger dataframe that has new feature columns with dummy variables. Set this dataframe as final_data.</li>
+  </ul>
+
+
+
